@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap');
+/* Navbar styling */
+nav {
+    position: absolute;
+    top: 20px; /* Positioning at the top */
+    right: 20px; /* Aligning to the right */
+    z-index: 100;
+    font-family: "Afacad Flux";
+}
+
+
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+    justify-content: flex-end;
+}
+
+nav ul li {
+    padding: 10px 20px;
+    border: 1px solid yellowgreen;
+    border-radius: 50px;
+    font-weight: 500;
+    color: #000000bb;
+    transition: all ease 0.4s;
+    position: relative;
+    font-size: 18px;
+    overflow: hidden;
+}
+
+nav ul li::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: red;
+    left: 0;
+    bottom: -100%;
+    border-radius: 50%;
+    transition: all ease 0.4s;
+}
+
+nav ul li:hover::after {
+    bottom: 0;
+    border-radius: 0;
+}
+
+nav ul li a {
+    color: yellow;
+    text-decoration: none;
+    position: relative;
+    z-index: 9;
+}
+
+nav ul li:hover a {
+    color: white;
+}

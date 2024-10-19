@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+body{
+    padding:0;
+    margin:0;
+    
+    background: hsl(0, 0%, 90%);
+    /* background-image: linear-gradient(to bottom right, #F956B3, #EB7D0E); */
+}
+
+
+
+.wave {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.wave svg {
+    position: relative;
+    display: block;
+    width: calc(121% + 1.3px);
+    height: 155px;
+    transform: rotateY(180deg);
+}
+
+.wave .shape-fill {
+    fill: yellow;
+}
+
+h1{
+    margin:10px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    /* height: 0px; */
+    color: blue;
+    font-family: "Bebas Neue";
+    font-style: normal;
+    text-align: center;
+    
+    text-decoration: underline overline;
+}
+
+.image-slider {
+    overflow: hidden; /* Hide overflow */
+    white-space: nowrap; /* Prevent wrapping */
+    position: relative; /* For positioning child elements */
+    width: 100%; /* Full width */
+}
+
+.image-container {
+    display: flex;
+    animation: slide 20s linear infinite; /* Adjust duration for speed */
+}
+
+.image-container img {
+    height: 200%; /* Adjust height */
+    margin: 0 10px; /* Space between images */
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%); /* Slide left by 100% of container width */
+    }
+}
+
+.devtools{
+    display: flex;
+    justify-content: space-evenly;
+}
